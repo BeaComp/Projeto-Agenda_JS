@@ -31,6 +31,11 @@
               <label for="dataEvento" class="form-label">Data do Evento</label>
               <input type="datetime-local" name="dataEvento" id="dataEvento" class="form-control">
             </div>
+            <div class="col-12">
+              <div id="mensagemErro" class="alert alert-danger d-none" role="alert">
+                Mensagem de erro!
+              </div>
+            </div>
             <div class="col-6"><button type="button" class="btn btn-danger w-100" id="cancelaEvento">Cancelar</button></div>
             <div class="col-6"><button type="submit" class="btn btn-primary w-100">Salvar</button></div>
           </div>
@@ -51,12 +56,14 @@
       <div class="col-12">
         <table class="table"> <!--Tabela-->
           <thead>
-            <th scope="col">Data</th>
-            <th scope="col">Evento</th>
-            <th scope="col">Ações</th>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Evento</th>
+              <th scope="col">Ações</th>
+            </tr>
           </thead>
-          <tbody>
-            <td colspan="3">Nenhum evento</td>
+          <tbody id="tabelaEventos">
+            
           </tbody>
         </table>
       </div>
